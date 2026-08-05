@@ -70,7 +70,7 @@ public class Worker(IConfiguration config, ILogger<Worker> logger) : BackgroundS
         string smtpLogin = config["SMTP:Login"]!;
         string smtpPassword = config["SMTP:Password"]!;
 
-        string letterTemplate = File.ReadAllText("template.html");
+        string letterTemplate = File.ReadAllText("Templates/template.html");
         
         var message = new MailMessage();
         
